@@ -1,0 +1,34 @@
+<resources>
+    <string name="app_name">app</string>
+    <string name="email">email</string>
+    <string name="confirmpassword">ConfirmPassword</string>
+    <string name="password">password</string>
+    <string name="register">Register</string>
+    <string name="already_have_an_account">Already have an account?</string>
+    <string name="username">username</string>
+    <string name="registration">Registration</string>
+    <string name="_24_7_health_care">24/7 Health Care</string>
+    <string name="login">Login</string>
+    <string name="register_for_new_user">Register for New User?</string>
+    <string name="lab_test">LAB TEST</string>
+    <string name="buy_medicine">BUY MEDICINE</string>
+    <string name="find_doctor">FIND DOCTOR</string>
+    <string name="health_articles">HEALTH ARTICLES</string>
+    <string name="order_details">ORDER DETAILS</string>
+    <string name="log_out">LOG OUT</string>
+    <string name="home">HOME</string>
+    <string name="articles">ARTICLES</string>
+    <string name="logout">LOGOUT</string>
+    <string name="orderdetails">orderDetails</string>
+    <string name="todo">TODO</string>
+    <string name="find_doctors">FIND DOCTOR</string>
+    <string name="booking_appointment">Booking Appointment</string>
+    <string name="delivery_location_tamil_nadu">Delivery Location : Tamil Nadu</string>
+    <string name="lab_test_and_packages">Lab Test and Packages</string>
+    <string name="back">BACK</string>
+    <string name="go_to_cart">Go to Cart</string>
+    <string name="lab_test_cart_item">Lab Test Cart Item</string>
+    <string name="select_delivery_date">Select Delivery Date</string>
+    <string name="select_delivery_time">Select Delivery Time</string>
+    <string name="check_out">CHECK OUT</string>
+</resources>
