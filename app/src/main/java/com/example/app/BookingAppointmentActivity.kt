@@ -14,14 +14,14 @@ class BookingAppointmentActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_booking_appointment)
-        val tv : TextView = findViewById(R.id.TextViewAppTitle)
-        val edName : EditText = findViewById(R.id.editTextAppFullName)
-        val edAddress : EditText = findViewById(R.id.editTextAppAddress)
-        val edContactNumber : EditText = findViewById(R.id.editTextAppContactNumber)
-        val edFees : EditText = findViewById(R.id.editTextAppFees)
+        val tv : TextView = findViewById(R.id.TextViewLTBTitle)
+        val edName : EditText = findViewById(R.id.LTBFullName)
+        val edAddress : EditText = findViewById(R.id.LTBAddress)
+        val edContactNumber : EditText = findViewById(R.id.LTBPinCode)
+        val edFees : EditText = findViewById(R.id.LTBContact)
         var timeButton : Button = findViewById(R.id.cartTime)
         var dateButton : Button = findViewById(R.id.cartDate)
-        val buttonBack : Button = findViewById(R.id.buttonBack)
+        val buttonBack : Button = findViewById(R.id.LTBBook)
         val buttonBook : Button = findViewById(R.id.BookingAppointment)
 
         // Date Dialer setup

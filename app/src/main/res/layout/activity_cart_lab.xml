@@ -9,14 +9,13 @@
 
 
     <TextView
-        android:id="@+id/LDName"
+        android:id="@+id/ODName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/_24_7_health_care"
         android:textColor="@color/purple_200"
         android:textSize="34sp"
         android:textStyle="bold"
-
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -36,11 +35,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/CartTitle"
+        app:layout_constraintTop_toBottomOf="@+id/BMCartTitle"
         app:layout_constraintVertical_bias="0.0" />
 
     <TextView
-        android:id="@+id/CartTitle"
+        android:id="@+id/BMCartTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="612dp"
@@ -52,11 +51,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/LDName"
+        app:layout_constraintTop_toBottomOf="@+id/ODName"
         app:layout_constraintVertical_bias="0.777" />
 
     <ListView
-        android:id="@+id/listViewCart"
+        android:id="@+id/BMListView"
         android:layout_width="344dp"
         android:layout_height="338dp"
         android:layout_margin="10dp"
@@ -69,19 +68,32 @@
         app:layout_constraintTop_toBottomOf="@+id/LDLocation"
         app:layout_constraintVertical_bias="0.012" />
 
+
     <TextView
+        android:id="@+id/cartLabTotalTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
-        android:text="Total Cost : 1298/-"
+        android:text="Total Cost:"
         android:textColor="@color/white"
         android:textSize="20sp"
-        android:id="@+id/CartTotalPrice"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintEnd_toStartOf="@+id/CartTotalPrice"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/listViewCart" />
+        app:layout_constraintTop_toBottomOf="@+id/BMListView" />
 
+    <TextView
+        android:id="@+id/CartTotalPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="1298/-"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.606"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/BMListView" />
 
     <TextView
         android:id="@+id/textView"

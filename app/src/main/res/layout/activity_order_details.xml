@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/back1"
-    tools:context=".DoctorDetailsActivity">
+    tools:context=".OrderDetailsActivity">
+
     <TextView
         android:id="@+id/ODName"
         android:layout_width="wrap_content"
@@ -21,11 +22,11 @@
         app:layout_constraintVertical_bias="0.045" />
 
     <TextView
-        android:id="@+id/LDLocation"
+        android:id="@+id/ODTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="612dp"
-        android:text="Default Text"
+        android:text="@string/od_order_details"
         android:textColor="@color/white"
         android:textSize="20sp"
         android:textStyle="bold"
@@ -46,18 +47,17 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/LDLocation" />
+        app:layout_constraintTop_toBottomOf="@+id/ODTitle" />
 
     <Button
         android:id="@+id/BMBack"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="BACK"
+        android:text="@string/od_back"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintVertical_bias="0.69"
         />
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

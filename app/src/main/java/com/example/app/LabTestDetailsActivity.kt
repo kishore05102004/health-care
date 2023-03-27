@@ -16,7 +16,7 @@ class LabTestDetailsActivity : AppCompatActivity() {
         val packages : TextView = findViewById(R.id.LDPackages)
         val details : TextView = findViewById(R.id.editTextLDMultiLine)
         val btnAddToCart : Button = findViewById(R.id.LDaddToCart)
-        val btnBack : Button = findViewById(R.id.buttonLDBack)
+        val btnBack : Button = findViewById(R.id.BMBack)
         val db = Data(applicationContext, "healthcare", null, 1)
         // details not be edited by user.
         details.keyListener = null

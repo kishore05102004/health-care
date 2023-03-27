@@ -15,9 +15,9 @@ class LoginActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
 
-        val edUserName : EditText = findViewById(R.id.editTextAppFullName)
-        val edPassword : EditText = findViewById(R.id.editTextAppFees)
-        val loginButton : Button = findViewById(R.id.buttonBack)
+        val edUserName : EditText = findViewById(R.id.LTBFullName)
+        val edPassword : EditText = findViewById(R.id.LTBContact)
+        val loginButton : Button = findViewById(R.id.LTBBook)
         val newRegister = findViewById<TextView>(R.id.registration)
         val db = Data(applicationContext, "healthcare", null, 1)
         loginButton.setOnClickListener {

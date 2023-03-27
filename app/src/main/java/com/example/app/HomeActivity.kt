@@ -19,6 +19,8 @@ class HomeActivity : AppCompatActivity() {
         val exit = findViewById<CardView>(R.id.cardExit)
         val findDoctor = findViewById<CardView>(R.id.cardFindDoctor)
         val labTest = findViewById<CardView>(R.id.cardLabTest)
+        val orderDetails = findViewById<CardView>(R.id.cardOrderDetails)
+        val buyMedicine = findViewById<CardView>(R.id.cardBuyMedicine)
         exit.setOnClickListener {
             val editor = sharedPreference.edit()
             editor.clear()
@@ -33,5 +35,13 @@ class HomeActivity : AppCompatActivity() {
         labTest.setOnClickListener {
             startActivity(Intent(this, LabTestActivity::class.java))
         }
+
+        orderDetails.setOnClickListener {
+            startActivity(Intent(this, OrderDetailsActivity::class.java))
+        }
+        buyMedicine.setOnClickListener {
+            startActivity(Intent(this, BuyMedicineActivity::class.java))
+        }
+
     }
 }

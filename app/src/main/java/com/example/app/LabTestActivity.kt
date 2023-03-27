@@ -40,9 +40,9 @@ class LabTestActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_lab_test)
-        val goCart = findViewById<Button>(R.id.goToCart)
-        val back = findViewById<Button>(R.id.buttonLDBack)
-        val listView = findViewById<ListView>(R.id.listViewCart)
+        val goCart = findViewById<Button>(R.id.BMGoToCart)
+        val back = findViewById<Button>(R.id.BMBack)
+        val listView = findViewById<ListView>(R.id.BMListView)
         val list=ArrayList<HashMap<String,Any>>()
 
         back.setOnClickListener {

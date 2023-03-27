@@ -58,7 +58,7 @@ class DoctorDetailsActivity : AppCompatActivity() {
         val list=ArrayList<HashMap<String,Any>>()
 
         val defaultText : TextView = findViewById(R.id.LDLocation)
-        val backButton : TextView = findViewById(R.id.buttonLDBack)
+        val backButton : TextView = findViewById(R.id.BMBack)
         val intent = intent
         val title = intent.getStringExtra("title")
         defaultText.text = title
@@ -91,7 +91,7 @@ class DoctorDetailsActivity : AppCompatActivity() {
             list.add(item)
         }
         val sa = SimpleAdapter(this, list, R.layout.multi_lines, arrayOf("line1", "line2", "line3", "line4","line5"), intArrayOf(R.id.line_a, R.id.line_b, R.id.line_c, R.id.line_d, R.id.line_e))
-        val lst : ListView = findViewById(R.id.listViewCart)
+        val lst : ListView = findViewById(R.id.BMListView)
         lst.adapter = sa
 
         lst.setOnItemClickListener { adapterView, view, i, l ->
