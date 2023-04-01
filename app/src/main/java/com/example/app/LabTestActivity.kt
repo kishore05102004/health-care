@@ -41,7 +41,7 @@ class LabTestActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_lab_test)
         val goCart = findViewById<Button>(R.id.BMGoToCart)
-        val back = findViewById<Button>(R.id.BMBack)
+        val back = findViewById<Button>(R.id.BMDBack)
         val listView = findViewById<ListView>(R.id.BMListView)
         val list=ArrayList<HashMap<String,Any>>()
 

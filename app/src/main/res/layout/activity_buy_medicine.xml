@@ -31,26 +31,25 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ODName"
-        app:layout_constraintVertical_bias="0.652" />
+        app:layout_constraintVertical_bias="0.3" />
 
     <TextView
         android:id="@+id/BMCartTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="552dp"
-        android:text="Buy Medicines"
+        android:text="@string/buy_medicines"
         android:textColor="@color/YellowLight"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.517"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/LDLocation"
-        app:layout_constraintVertical_bias="0.325" />
+        app:layout_constraintVertical_bias="0.166" />
 
     <ListView
         android:id="@+id/BMListView"
@@ -68,7 +67,7 @@
         app:layout_constraintVertical_bias="0.466" />
 
     <Button
-        android:id="@+id/BMBack"
+        android:id="@+id/BMDBack"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/back"

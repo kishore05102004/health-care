@@ -1,7 +1,6 @@
 package com.example.app
 
 import android.app.DatePickerDialog
-import android.app.TimePickerDialog
 import android.content.Context
 import android.content.Intent
 import android.icu.util.Calendar
@@ -12,16 +11,16 @@ import android.widget.SimpleAdapter
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 
-class CartLabActivity : AppCompatActivity() {
+class CartBuyMedicineActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_cart_lab)
-        // Initialisation
-        val tvTotal : TextView = findViewById(R.id.BMCartTotalPrice)
+        setContentView(R.layout.activity_cart_buy_medicine)
+
         val dateButton : Button = findViewById(R.id.BMCartDate)
-        val timeButton : Button = findViewById(R.id.cartTime)
         val checkout : Button = findViewById(R.id.BMcartCheckout)
         val back : Button = findViewById(R.id.BMcartBack)
+        val tvTotal : TextView = findViewById(R.id.BMCartTotalPrice)
+        val lst : ListView = findViewById(R.id.BMListView)
         val list = ArrayList<HashMap<String, Any>>()
 
         val sharedPreference = getSharedPreferences("MY_PRE", Context.MODE_PRIVATE)
@@ -49,16 +48,10 @@ class CartLabActivity : AppCompatActivity() {
         // define minimum date
         datePicker.datePicker.minDate = minDate
 
-        // time
-        val timePicker = TimePickerDialog(this, { _,hourOfDay, minute ->
-            val selectedTime = "${hourOfDay}:$minute"
-            timeButton.text = selectedTime
-        }, calendar.get(Calendar.HOUR_OF_DAY), calendar.get(Calendar.MINUTE), false)
 
         val db = Data(applicationContext, "healthcare", null, 1)
         var totalAmount : Float = 0F
-        val dbData : ArrayList<String> = db.getCartData (username, "lab")
-//        Toast.makeText(this,""+dbData, Toast.LENGTH_LONG).show()
+        val dbData : ArrayList<String> = db.getCartData (username, "medicine")
         val packages = Array(dbData.size) { arrayOfNulls<String>(5) }
         for (i in 0 until dbData.size) {
             val arrData = dbData[i].toString()
@@ -69,7 +62,7 @@ class CartLabActivity : AppCompatActivity() {
         }
 
         tvTotal.text = "$totalAmount"
-        System.out.println("price"+tvTotal.text.toString())
+
         for(i in packages.indices) {
             val item = HashMap<String, Any>()
             packages[i][0]?.let { item.put("line1", it) }
@@ -80,25 +73,17 @@ class CartLabActivity : AppCompatActivity() {
             list.add(item)
         }
         val sa = SimpleAdapter(this, list, R.layout.multi_lines, arrayOf("line1", "line2", "line3", "line4","line5"), intArrayOf(R.id.line_a, R.id.line_b, R.id.line_c, R.id.line_d, R.id.line_e))
-        val lst : ListView = findViewById(R.id.BMListView)
         lst.adapter = sa
 
         //button actions
         back.setOnClickListener {
-            startActivity(Intent(this, LabTestActivity::class.java))
+            startActivity(Intent(this, BuyMedicineActivity::class.java))
         }
 
-        dateButton.setOnClickListener {
-            datePicker.show()
-        }
-        timeButton.setOnClickListener {
-            timePicker.show()
-        }
         checkout.setOnClickListener {
-            val it  = Intent(this, LabTestBookActivity::class.java)
+            val it  = Intent(this, BuyMedicineBookActivity::class.java)
             it.putExtra("bookingPrice", tvTotal.text.toString())
             it.putExtra("date", dateButton.text.toString())
-            it.putExtra("time", timeButton.text.toString())
             startActivity(it)
 
 

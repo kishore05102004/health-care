@@ -5,9 +5,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/back1"
-    tools:context=".DoctorDetailsActivity">
+    tools:context=".HealthArticlesActivity">
     <TextView
-        android:id="@+id/ODName"
+        android:id="@+id/HAName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/_24_7_health_care"
@@ -21,11 +21,11 @@
         app:layout_constraintVertical_bias="0.045" />
 
     <TextView
-        android:id="@+id/LDLocation"
+        android:id="@+id/ODTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="612dp"
-        android:text="Default Text"
+        android:text="@string/health_article"
         android:textColor="@color/white"
         android:textSize="20sp"
         android:textStyle="bold"
@@ -33,10 +33,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ODName" />
+        app:layout_constraintTop_toBottomOf="@+id/HAName" />
 
     <ListView
-        android:id="@+id/BMListView"
+        android:id="@+id/HAListView"
         android:layout_width="350dp"
         android:layout_height="500dp"
         android:layout_margin="10dp"
@@ -46,18 +46,17 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/LDLocation" />
+        app:layout_constraintTop_toBottomOf="@+id/ODTitle" />
 
     <Button
-        android:id="@+id/BMDBack"
+        android:id="@+id/HABack"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="BACK"
+        android:text="@string/od_back"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintVertical_bias="0.69"
         />
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

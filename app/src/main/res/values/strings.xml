@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">app</string>
+    <string name="app_name">HealthLink</string>
     <string name="email">email</string>
     <string name="confirmpassword">ConfirmPassword</string>
     <string name="password">password</string>
@@ -39,4 +39,8 @@
     <string name="book">book</string>
     <string name="od_order_details">ORDER DETAILS</string>
     <string name="od_back">BACK</string>
+    <string name="buy_medicines">Buy Medicines</string>
+    <string name="health_article">Health Articles</string>
+    <string name="dentist">DENTIST</string>
+    <string name="todos">TODO</string>
 </resources>

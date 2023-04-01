@@ -37,7 +37,7 @@
         app:layout_constraintVertical_bias="0.081" />
 
     <EditText
-        android:id="@+id/LTBFullName"
+        android:id="@+id/BMBFullName"
         android:layout_width="308dp"
         android:layout_height="48dp"
         android:layout_marginTop="60dp"
@@ -60,7 +60,7 @@
         app:layout_constraintTop_toBottomOf="@+id/TextViewLTBTitle" />
 
     <EditText
-        android:id="@+id/LTBContact"
+        android:id="@+id/BMBContact"
         android:layout_width="308dp"
         android:layout_height="48dp"
         android:layout_marginTop="44dp"
@@ -80,10 +80,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.504"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/LTBFullName" />
+        app:layout_constraintTop_toBottomOf="@+id/BMBFullName" />
 
     <Button
-        android:id="@+id/LTBBook"
+        android:id="@+id/BMBBook"
         android:layout_width="285dp"
         android:layout_height="48dp"
         android:layout_marginTop="48dp"
@@ -91,7 +91,7 @@
         android:text="@string/login"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/LTBContact"
+        app:layout_constraintTop_toBottomOf="@+id/BMBContact"
         tools:ignore="DuplicateSpeakableTextCheck" />
 
     <TextView
@@ -107,6 +107,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/LTBBook"
+        app:layout_constraintTop_toBottomOf="@+id/BMBBook"
         app:layout_constraintVertical_bias="0.305" />
 </androidx.constraintlayout.widget.ConstraintLayout>

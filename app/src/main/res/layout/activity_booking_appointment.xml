@@ -39,7 +39,7 @@
         app:layout_constraintVertical_bias="1.0" />
 
     <EditText
-        android:id="@+id/LTBFullName"
+        android:id="@+id/BMBFullName"
         android:layout_width="308dp"
         android:layout_height="48dp"
         android:layout_marginTop="40dp"
@@ -62,7 +62,7 @@
         app:layout_constraintTop_toBottomOf="@+id/TextViewLTBTitle" />
 
     <EditText
-        android:id="@+id/LTBAddress"
+        android:id="@+id/BMBAddress"
         android:layout_width="308dp"
         android:layout_height="48dp"
         android:layout_marginTop="32dp"
@@ -81,10 +81,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/LTBFullName" />
+        app:layout_constraintTop_toBottomOf="@+id/BMBFullName" />
 
     <EditText
-        android:id="@+id/LTBContact"
+        android:id="@+id/BMBContact"
         android:layout_width="308dp"
         android:layout_height="48dp"
         android:layout_marginTop="32dp"
@@ -103,10 +103,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.504"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/LTBPinCode" />
+        app:layout_constraintTop_toBottomOf="@+id/BMBPinCode" />
 
     <EditText
-        android:id="@+id/LTBPinCode"
+        android:id="@+id/BMBPinCode"
         android:layout_width="308dp"
         android:layout_height="48dp"
         android:layout_marginTop="28dp"
@@ -125,7 +125,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/LTBAddress" />
+        app:layout_constraintTop_toBottomOf="@+id/BMBAddress" />
 
     <Button
         android:id="@+id/BookingAppointment"
@@ -136,10 +136,10 @@
         android:text="Book Appointment"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/LTBContact" />
+        app:layout_constraintTop_toBottomOf="@+id/BMBContact" />
 
     <Button
-        android:id="@+id/LTBBook"
+        android:id="@+id/BMBBook"
         android:layout_width="285dp"
         android:layout_height="48dp"
         android:layout_marginTop="192dp"
@@ -147,7 +147,7 @@
         android:text="BACK"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/LTBContact" />
+        app:layout_constraintTop_toBottomOf="@+id/BMBContact" />
 
     <TextView
         android:id="@+id/textView"
@@ -159,7 +159,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.152"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/LTBContact" />
+        app:layout_constraintTop_toBottomOf="@+id/BMBContact" />
 
     <TextView
         android:id="@+id/textView2"
@@ -171,10 +171,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.845"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/LTBContact" />
+        app:layout_constraintTop_toBottomOf="@+id/BMBContact" />
 
     <Button
-        android:id="@+id/cartDate"
+        android:id="@+id/BMCartDate"
         style="?android:spinnerStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

@@ -94,7 +94,7 @@ class Data(
         return arr
     }
 
-    fun addOrder(username: String, fullName: String, address: String, contactNo: String, pinCode: Int, date: String, time: String, price: Double, orderType: String){
+    fun addOrder(username: String, fullName: String, address: String, contactNo: String, pinCode: Int, date: String, time: String, price: Float, orderType: String){
         val cv = ContentValues()
         cv.put(USERNAME_COL, username)
         cv.put(FULL_NAME_COL, fullName)
@@ -122,6 +122,18 @@ class Data(
         db.close()
         return arr
     }
+
+    fun checkAppointmentExists(username : String, fullName : String, address : String, contact : String, date : String, time : String) :Int {
+        var result :Int = 0
+        val db = this.readableDatabase
+        val cursor = db.rawQuery("SELECT * FROM $TABLE_NAME_ORDER_PLACE where $USERNAME_COL= '$username' and $FULL_NAME_COL = '$fullName' and $ADDRESS_COL='$address' and $CONTACT_NO_COL='$contact' and $DATE_COL='$date' and $TIME_COL='$time'", null)
+        if(cursor.moveToFirst()){
+            result = 1
+        }
+        db.close()
+        return result
+    }
+
 
     companion object {
         const val TABLE_NAME = "users"

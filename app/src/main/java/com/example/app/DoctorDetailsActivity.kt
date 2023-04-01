@@ -58,7 +58,7 @@ class DoctorDetailsActivity : AppCompatActivity() {
         val list=ArrayList<HashMap<String,Any>>()
 
         val defaultText : TextView = findViewById(R.id.LDLocation)
-        val backButton : TextView = findViewById(R.id.BMBack)
+        val backButton : TextView = findViewById(R.id.BMDBack)
         val intent = intent
         val title = intent.getStringExtra("title")
         defaultText.text = title

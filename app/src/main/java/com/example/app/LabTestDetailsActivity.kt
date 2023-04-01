@@ -12,11 +12,11 @@ class LabTestDetailsActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_lab_test_details)
-        val cost : TextView = findViewById(R.id.LDtotalCost)
-        val packages : TextView = findViewById(R.id.LDPackages)
-        val details : TextView = findViewById(R.id.editTextLDMultiLine)
-        val btnAddToCart : Button = findViewById(R.id.LDaddToCart)
-        val btnBack : Button = findViewById(R.id.BMBack)
+        val cost : TextView = findViewById(R.id.BMDTotalCost)
+        val packages : TextView = findViewById(R.id.BMDPackages)
+        val details : TextView = findViewById(R.id.BMDEditTextMultiLine)
+        val btnAddToCart : Button = findViewById(R.id.BMDAddToCart)
+        val btnBack : Button = findViewById(R.id.BMDBack)
         val db = Data(applicationContext, "healthcare", null, 1)
         // details not be edited by user.
         details.keyListener = null

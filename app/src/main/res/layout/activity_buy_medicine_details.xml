@@ -5,8 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/back1"
-    tools:context=".LabTestDetailsActivity">
-
+    tools:context=".BuyMedicineDetailsActivity">
 
     <TextView
         android:id="@+id/ODName"
@@ -43,7 +42,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="552dp"
-        android:text="@string/lab_test_and_packages"
+        android:text="@string/buy_medicines"
         android:textColor="@color/YellowLight"
         android:textSize="20sp"
         android:textStyle="bold"
@@ -111,5 +110,4 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/BMDEditTextMultiLine"
         app:layout_constraintVertical_bias="0.8" />
-
 </androidx.constraintlayout.widget.ConstraintLayout>

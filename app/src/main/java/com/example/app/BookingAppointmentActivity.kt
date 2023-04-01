@@ -2,12 +2,14 @@ package com.example.app
 
 import android.app.DatePickerDialog
 import android.app.TimePickerDialog
+import android.content.Context
 import android.content.Intent
 import android.icu.util.Calendar
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 
 class BookingAppointmentActivity : AppCompatActivity() {
@@ -15,13 +17,13 @@ class BookingAppointmentActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_booking_appointment)
         val tv : TextView = findViewById(R.id.TextViewLTBTitle)
-        val edName : EditText = findViewById(R.id.LTBFullName)
-        val edAddress : EditText = findViewById(R.id.LTBAddress)
-        val edContactNumber : EditText = findViewById(R.id.LTBPinCode)
-        val edFees : EditText = findViewById(R.id.LTBContact)
+        val edName : EditText = findViewById(R.id.BMBFullName)
+        val edAddress : EditText = findViewById(R.id.BMBAddress)
+        val edContactNumber : EditText = findViewById(R.id.BMBPinCode)
+        val edFees : EditText = findViewById(R.id.BMBContact)
         var timeButton : Button = findViewById(R.id.cartTime)
-        var dateButton : Button = findViewById(R.id.cartDate)
-        val buttonBack : Button = findViewById(R.id.LTBBook)
+        var dateButton : Button = findViewById(R.id.BMCartDate)
+        val buttonBack : Button = findViewById(R.id.BMBBook)
         val buttonBook : Button = findViewById(R.id.BookingAppointment)
 
         // Date Dialer setup
@@ -81,6 +83,19 @@ class BookingAppointmentActivity : AppCompatActivity() {
 
         buttonBack.setOnClickListener {
             startActivity(Intent(this, FindDoctorActivity::class.java))
+        }
+        buttonBook.setOnClickListener {
+            val sharedPreference = getSharedPreferences("MY_PRE", Context.MODE_PRIVATE)
+            val username = sharedPreference.getString("USERNAME", "").toString()
+            val db = Data(applicationContext, "healthcare", null, 1)
+            if(db.checkAppointmentExists(username, "$title => $fullName",address.toString(),contact.toString(),dateButton.text.toString(),timeButton.text.toString() ) ==1 ) {
+                Toast.makeText(this, "Appointment already booked", Toast.LENGTH_LONG).show()
+            }
+            else {
+                db.addOrder(username, "$title => $fullName",address.toString(),contact.toString(), 0,dateButton.text.toString(),timeButton.text.toString(), fees.toString().toFloat(), "appointment")
+                Toast.makeText(this, "Your appointment is Done Sucessfully", Toast.LENGTH_LONG).show()
+                startActivity(Intent(this, HomeActivity::class.java))
+            }
         }
     }
 }

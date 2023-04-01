@@ -5,9 +5,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/back1"
-    tools:context=".DoctorDetailsActivity">
+    tools:context=".HealthArticlesDetailsActivity">
+
     <TextView
-        android:id="@+id/ODName"
+        android:id="@+id/HADName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/_24_7_health_care"
@@ -21,11 +22,11 @@
         app:layout_constraintVertical_bias="0.045" />
 
     <TextView
-        android:id="@+id/LDLocation"
+        android:id="@+id/HADTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="612dp"
-        android:text="Default Text"
+        android:text="@string/dentist"
         android:textColor="@color/white"
         android:textSize="20sp"
         android:textStyle="bold"
@@ -33,31 +34,30 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ODName" />
+        app:layout_constraintTop_toBottomOf="@+id/HADName" />
 
-    <ListView
-        android:id="@+id/BMListView"
-        android:layout_width="350dp"
-        android:layout_height="500dp"
-        android:layout_margin="10dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <ImageView
+        android:id="@+id/HADImageView"
+        android:layout_width="358dp"
+        android:layout_height="526dp"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/health1"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.49"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/LDLocation" />
+        app:layout_constraintTop_toBottomOf="@+id/HADTitle"
+        android:contentDescription="@string/todos" />
 
     <Button
-        android:id="@+id/BMDBack"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="BACK"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="8dp"
+        android:text="@string/back"
+        android:id="@+id/HADBack"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintVertical_bias="0.69"
-        />
+        app:layout_constraintTop_toBottomOf="@+id/HADImageView" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

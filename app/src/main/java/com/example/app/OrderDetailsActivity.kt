@@ -14,7 +14,7 @@ class OrderDetailsActivity : AppCompatActivity() {
         setContentView(R.layout.activity_order_details)
         // initialize the id's
         val lst = findViewById<ListView>(R.id.BMListView)
-        val backButton = findViewById<Button>(R.id.BMBack)
+        val backButton = findViewById<Button>(R.id.BMDBack)
         val list = ArrayList<HashMap<String, Any>>()
 
         val db = Data(applicationContext, "healthcare", null, 1)
